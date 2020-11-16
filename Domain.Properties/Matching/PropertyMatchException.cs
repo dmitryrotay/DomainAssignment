@@ -6,7 +6,6 @@ namespace Domain.Properties.Matching
     {
         public PropertyMatchException(string message, Exception innerException)
             : base(message, innerException)
-
         {}
     }
 }
