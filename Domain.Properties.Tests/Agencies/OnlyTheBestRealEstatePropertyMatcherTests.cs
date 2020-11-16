@@ -44,5 +44,25 @@ namespace Domain.Properties.Tests.Agencies
 
             Assert.True(matcher.IsMatch(agencyProperty, databaseProperty));
         }
+
+        [Fact]
+        public void IsMatch_Returns_False_On_Text_Mismatch()
+        {
+            var agencyProperty = new Property
+            {
+                Name = "*Super*-High! APARTMENTS (Sydney)",
+                Address = "32 Sir John-Young Crescent, Sydney, NSW"
+            };
+
+            var databaseProperty = new Property
+            {
+                Name = "Super High Apartments, Sydney",
+                Address = "32 Monsieur John Young Crescent, Sydney NSW"
+            };
+
+            var matcher = new OnlyTheBestRealEstatePropertyMatcher();
+
+            Assert.False(matcher.IsMatch(agencyProperty, databaseProperty));
+        }
     }
 }
