@@ -2,7 +2,7 @@
 {
     public interface IAgencyPropertyMatcher
     {
-        string AgencyCode { get; set; }
+        string AgencyCode { get; }
 
         bool IsMatch(Property agencyProperty, Property databaseProperty);
     }
