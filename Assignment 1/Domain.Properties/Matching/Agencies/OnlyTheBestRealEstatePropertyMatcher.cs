@@ -3,11 +3,11 @@ using System.Linq;
 
 namespace Domain.Properties.Matching.Agencies
 {
-    public class OnlyTheBestRealEstatePropertyMatcher : IAgencyPropertyMatcher
+    public class OnlyTheBestRealEstatePropertyMatcher : AgencyPropertyMatcher
     {
-        public string AgencyCode => "OTBRE";
+        public override string AgencyCode => "OTBRE";
 
-        public bool IsMatch(Property agencyProperty, Property databaseProperty)
+        protected override bool IsAgencySpecificMatch(Property agencyProperty, Property databaseProperty)
         {
             return EqualWithoutPunctuation(agencyProperty.Address, databaseProperty.Address) &&
                    EqualWithoutPunctuation(agencyProperty.Name, databaseProperty.Name);

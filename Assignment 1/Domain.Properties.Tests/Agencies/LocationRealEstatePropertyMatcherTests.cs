@@ -18,14 +18,14 @@ namespace Domain.Properties.Tests.Agencies
         {
             var agencyProperty = new Property
             {
-                AgencyCode = LocationRealEstatePropertyMatcher.LreAgencyCode,
+                AgencyCode = Constants.MockAgencyCode,
                 Latitude = BaseLatitude,
                 Longitude = BaseLongitude
             };
 
             var databaseProperty = new Property
             {
-                AgencyCode = Constants.AgencyCode,
+                AgencyCode = AgencyCodes.LocationRealEstate,
                 Latitude = BaseLatitude,
                 Longitude = BaseLongitude
             };
@@ -40,14 +40,14 @@ namespace Domain.Properties.Tests.Agencies
         {
             var agencyProperty = new Property
             {
-                AgencyCode = LocationRealEstatePropertyMatcher.LreAgencyCode,
+                AgencyCode = AgencyCodes.LocationRealEstate,
                 Latitude = BaseLatitude,
                 Longitude = BaseLongitude
             };
 
             var databaseProperty = new Property
             {
-                AgencyCode = LocationRealEstatePropertyMatcher.LreAgencyCode,
+                AgencyCode = AgencyCodes.LocationRealEstate,
                 Latitude = BaseLatitude + DegreesInThresholdDistance,
                 Longitude = BaseLongitude
             };
@@ -62,14 +62,14 @@ namespace Domain.Properties.Tests.Agencies
         {
             var agencyProperty = new Property
             {
-                AgencyCode = LocationRealEstatePropertyMatcher.LreAgencyCode,
+                AgencyCode = AgencyCodes.LocationRealEstate,
                 Latitude = BaseLatitude,
                 Longitude = BaseLongitude
             };
 
             var databaseProperty = new Property
             {
-                AgencyCode = LocationRealEstatePropertyMatcher.LreAgencyCode,
+                AgencyCode = AgencyCodes.LocationRealEstate,
                 Latitude = BaseLatitude + DegreesInThresholdDistance + 1,
                 Longitude = BaseLongitude
             };
@@ -84,14 +84,14 @@ namespace Domain.Properties.Tests.Agencies
         {
             var agencyProperty = new Property
             {
-                AgencyCode = LocationRealEstatePropertyMatcher.LreAgencyCode,
+                AgencyCode = AgencyCodes.LocationRealEstate,
                 Latitude = BaseLatitude,
                 Longitude = BaseLongitude
             };
 
             var databaseProperty = new Property
             {
-                AgencyCode = LocationRealEstatePropertyMatcher.LreAgencyCode,
+                AgencyCode = AgencyCodes.LocationRealEstate,
                 Latitude = BaseLatitude,
                 Longitude = BaseLongitude + DegreesInThresholdDistance
             };
@@ -106,14 +106,14 @@ namespace Domain.Properties.Tests.Agencies
         {
             var agencyProperty = new Property
             {
-                AgencyCode = LocationRealEstatePropertyMatcher.LreAgencyCode,
+                AgencyCode = AgencyCodes.LocationRealEstate,
                 Latitude = BaseLatitude,
                 Longitude = BaseLongitude
             };
 
             var databaseProperty = new Property
             {
-                AgencyCode = LocationRealEstatePropertyMatcher.LreAgencyCode,
+                AgencyCode = AgencyCodes.LocationRealEstate,
                 Latitude = BaseLatitude,
                 Longitude = BaseLongitude + DegreesInThresholdDistance + 1
             };
@@ -130,14 +130,14 @@ namespace Domain.Properties.Tests.Agencies
 
             var agencyProperty = new Property
             {
-                AgencyCode = LocationRealEstatePropertyMatcher.LreAgencyCode,
+                AgencyCode = AgencyCodes.LocationRealEstate,
                 Latitude = BaseLatitude,
                 Longitude = BaseLongitude
             };
 
             var databaseProperty = new Property
             {
-                AgencyCode = LocationRealEstatePropertyMatcher.LreAgencyCode,
+                AgencyCode = AgencyCodes.LocationRealEstate,
                 Latitude = BaseLatitude + squareSideFromDiagonal,
                 Longitude = BaseLongitude + squareSideFromDiagonal
             };
@@ -154,14 +154,14 @@ namespace Domain.Properties.Tests.Agencies
 
             var agencyProperty = new Property
             {
-                AgencyCode = LocationRealEstatePropertyMatcher.LreAgencyCode,
+                AgencyCode = AgencyCodes.LocationRealEstate,
                 Latitude = BaseLatitude,
                 Longitude = BaseLongitude
             };
 
             var databaseProperty = new Property
             {
-                AgencyCode = LocationRealEstatePropertyMatcher.LreAgencyCode,
+                AgencyCode = AgencyCodes.LocationRealEstate,
                 Latitude = BaseLatitude + squareSideFromDiagonal,
                 Longitude = BaseLongitude + squareSideFromDiagonal
             };

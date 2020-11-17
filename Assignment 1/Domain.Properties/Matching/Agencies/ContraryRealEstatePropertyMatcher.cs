@@ -3,11 +3,11 @@ using System.Linq;
 
 namespace Domain.Properties.Matching.Agencies
 {
-    public class ContraryRealEstatePropertyMatcher : IAgencyPropertyMatcher
+    public class ContraryRealEstatePropertyMatcher : AgencyPropertyMatcher
     {
-        public string AgencyCode => "CRE";
+        public override string AgencyCode => "CRE";
 
-        public bool IsMatch(Property agencyProperty, Property databaseProperty)
+        protected override bool IsAgencySpecificMatch(Property agencyProperty, Property databaseProperty)
         {
             return string.Equals(GetStringWithReverseWordOrder(agencyProperty.Name), databaseProperty.Name,
                 StringComparison.OrdinalIgnoreCase);

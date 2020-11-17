@@ -6,9 +6,9 @@ namespace Domain.Properties.Matching
 {
     public class AgencyPropertyMatcherSelector : IAgencyPropertyMatcherSelector
     {
-        private readonly IEnumerable<IAgencyPropertyMatcher> _propertyMatchers;
+        private readonly IEnumerable<AgencyPropertyMatcher> _propertyMatchers;
         
-        public AgencyPropertyMatcherSelector(IEnumerable<IAgencyPropertyMatcher> propertyMatchers)
+        public AgencyPropertyMatcherSelector(IEnumerable<AgencyPropertyMatcher> propertyMatchers)
         {
             _propertyMatchers = propertyMatchers;
         }

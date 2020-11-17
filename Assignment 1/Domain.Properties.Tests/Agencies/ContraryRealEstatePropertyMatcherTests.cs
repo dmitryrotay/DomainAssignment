@@ -13,12 +13,34 @@ namespace Domain.Properties.Tests.Agencies
         {
             var agencyProperty = new Property
             {
+                AgencyCode = AgencyCodes.ContraryRealEstate,
                 Name = PropertyName
             };
 
             var databaseProperty = new Property
             {
+                AgencyCode = AgencyCodes.ContraryRealEstate,
                 Name = PropertyName
+            };
+
+            var matcher = new ContraryRealEstatePropertyMatcher();
+
+            Assert.False(matcher.IsMatch(agencyProperty, databaseProperty));
+        }
+
+        [Fact]
+        public void IsMatch_Returns_False_When_Property_Names_Match_If_Words_Are_Reversed_And_Agency_Codes_Dont_Match()
+        {
+            var agencyProperty = new Property
+            {
+                AgencyCode = Constants.MockAgencyCode,
+                Name = PropertyName
+            };
+
+            var databaseProperty = new Property
+            {
+                AgencyCode = AgencyCodes.ContraryRealEstate,
+                Name = ReversedPropertyName
             };
 
             var matcher = new ContraryRealEstatePropertyMatcher();
@@ -31,11 +53,13 @@ namespace Domain.Properties.Tests.Agencies
         {
             var agencyProperty = new Property
             {
+                AgencyCode = AgencyCodes.ContraryRealEstate,
                 Name = PropertyName
             };
 
             var databaseProperty = new Property
             {
+                AgencyCode = AgencyCodes.ContraryRealEstate,
                 Name = ReversedPropertyName
             };
 
@@ -49,11 +73,13 @@ namespace Domain.Properties.Tests.Agencies
         {
             var agencyProperty = new Property
             {
+                AgencyCode = AgencyCodes.ContraryRealEstate,
                 Name = PropertyName.ToUpper()
             };
 
             var databaseProperty = new Property
             {
+                AgencyCode = AgencyCodes.ContraryRealEstate,
                 Name = ReversedPropertyName.ToLower()
             };
 

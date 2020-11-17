@@ -6,6 +6,7 @@ namespace Domain.Properties.Tests
 {
     public class PropertyMatcherTests
     {
+        public const string AgencyCode = "AGENCY";
         private readonly Property _agencyProperty;
         private readonly Property _databaseProperty;
         private readonly Mock<IAgencyPropertyMatcher> _agencyMatcherMock;
@@ -14,7 +15,7 @@ namespace Domain.Properties.Tests
 
         public PropertyMatcherTests()
         {
-            _agencyProperty = new Property { AgencyCode = Constants.AgencyCode };
+            _agencyProperty = new Property { AgencyCode = AgencyCode };
             _databaseProperty = new Property { AgencyCode = "DATABASE" };
 
             _agencyMatcherMock = new Mock<IAgencyPropertyMatcher>();
@@ -32,7 +33,7 @@ namespace Domain.Properties.Tests
         {
             _matcher.IsMatch(_agencyProperty, _databaseProperty);
 
-            _selectorMock.Verify(selector => selector.GetMatcher(Constants.AgencyCode), Times.Once);
+            _selectorMock.Verify(selector => selector.GetMatcher(AgencyCode), Times.Once);
         }
 
         [Fact]
